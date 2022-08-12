@@ -16,9 +16,13 @@ Add *ga4.hpp* to the *HEADERS* in your project ad add Qt *network* module.
 	onActiveChanged: { ga4.sendEvent("Gandalf", ["talk", "YouShallNotPass"]) }
 
 Use the function like:
+
 	sendEvent(eventName, eventParameters, turnOnDebugMode)
+
 *QString eventName - name of the event
+
 QList<QString> eventParameters - pairs of parameters ["firstParamName", "firstParamValue",...]
+
 bool turnOnDebugMode - if set to True, the events are shown in a few seconds in the Analytics realtime view and are deleted after 30 minutes*
 
 ## Additional info
