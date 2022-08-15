@@ -38,5 +38,6 @@ If you send the events with custom parameters, you have to define them in Google
 [APP + WEB: Google Analytics Measurement Protocol version 2
 Date
 ](https://www.thyngster.com/app-web-google-analytics-measurement-protocol-version-2)
+
 [Measurement protocol V2 Google analytics Apps+Web](https://lunaxod.com/measurement-protocol-v2-google-analytics-appsweb/)
 
