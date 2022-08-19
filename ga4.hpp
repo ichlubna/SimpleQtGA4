@@ -23,10 +23,7 @@ public:
 
     Q_INVOKABLE void sendEvent(QString eventName, QList<QString> parameters, bool debug=false)
     {
-        //sources:
-        //https://www.thyngster.com/app-web-google-analytics-measurement-protocol-version-2
-        //https://lunaxod.com/measurement-protocol-v2-google-analytics-appsweb/
-        QString request = "https://www.google-analytics.com/g/collect?v=2";
+        QString request = analyticsURL;
         request += "&tid=" + measurementID
         + "&cid=" + clientID
         + "&sid=" + QString::fromStdString(std::to_string(sessionID))
@@ -45,11 +42,13 @@ public:
         }
         request += requestParams;
 
-        if(debug)
+        if(debug || globalDebug)
             request += "&_dbg=1";
 
         makeRequest(request);
     };
+    
+    Q_INVOKABLE void overrideDebugMode(bool debug) { globalDebug = debug; }
 
 signals:
     void measurementIDChanged();
@@ -76,6 +75,8 @@ private:
     QString measurementID;
     QString clientID{"randomClient"};
     const size_t sessionID;
+    bool globalDebug{false};
+    QString analyticsURL{"https://www.google-analytics.com/g/collect?v=2"};
 };
 
 #endif

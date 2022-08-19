@@ -34,6 +34,10 @@ You can obtain your ID when creating a Google Analytics service and creating a w
 
 If you send the events with custom parameters, you have to define them in Google Analytics settings, otherwise they will not be stored! You can do so by selecting Configure section and Custom definitions. Follow [this](https://youtu.be/Y6YyzX_7OXk) tutorial.
 
+This library does not do any local storing of the events. All events are sent right when the function is called and in case of no Internet connection they are lost.
+
+If you encounter a problem with encryption, not being able to send the request, you need to install SSL libraries for your given platform. Another hack is to change *https* to *http* in the *analyticsURL* private member.
+
 ## Sources
 [APP + WEB: Google Analytics Measurement Protocol version 2
 Date
