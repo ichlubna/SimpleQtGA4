@@ -39,6 +39,8 @@ This library does not do any local storing of the events. All events are sent ri
 If you encounter a problem with encryption, not being able to send the request, you need to install SSL libraries for your given platform. Another hack is to change *https* to *http* in the *analyticsURL* private member.
 
 ## Sources
+[Limits for the event properties (length of the event etc.)](https://support.google.com/analytics/answer/9267744?hl=en&ref_topic=9756175)
+
 [APP + WEB: Google Analytics Measurement Protocol version 2
 Date
 ](https://www.thyngster.com/app-web-google-analytics-measurement-protocol-version-2)
